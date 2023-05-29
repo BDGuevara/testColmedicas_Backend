@@ -1,0 +1,27 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE 
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: mine2025
+    url: jdbc:sqlserver://localhost:1433;databaseName=TestColmedicas;encrypt=true;trustServerCertificate=true;
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  application:
+    name: servicio-paises
+server: 
+  port: 9090
